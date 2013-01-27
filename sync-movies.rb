@@ -42,8 +42,8 @@ module Util
 end
 
 class MovieDb
-  IgnorePatterns = [ /Gemfile.*/, /sync-movies.rb$/, /movie.db/ ]
   SqlFilename = "movies.db"
+  IgnorePatterns = [ /Gemfile.*/, /sync-movies\.rb$/, /#{SqlFilename}/ ]
 
   def initialize
     @db = SQLite3::Database.new SqlFilename
